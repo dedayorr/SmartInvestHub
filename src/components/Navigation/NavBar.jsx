@@ -5,27 +5,27 @@ import { CiMenuFries } from "react-icons/ci";
 import { LiaTimesSolid } from "react-icons/lia";
 
 export const NavBar = () => {
-  const [dropDown, setdropDown] = useState(true);
+  const [dropDown, setdropDown] = useState(false);
   const toggleMenu = () => {
     setdropDown(!dropDown);
   };
 
   return (
     <>
-      <div className="flex justify-between h-[70px] items-center mx-[9%] md:h-[90px] lg:mx-[7%]">
-        <p className="text-[#F6B17A] text-[15px] border-[1px] border-[#F6B17A] p-1 font-extrabold md:text-[35px] lg:text-[30px]">
+      <div className="flex justify-between h-[70px] items-center px-[9%] md:h-[90px] lg:px-[%]">
+        <p className="text-[#FFBD1A] text-[15px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]">
           SmartInvestHub
         </p>
         <ul className="text-[#828282] hidden lg:flex gap-[30px]">
-          <li className="hover:text-[#f6b17a] cursor-pointer">
+          <li className="hover:text-[#FFBD1A] cursor-pointer">
             Products & Services
           </li>
-          <li className="hover:text-[#f6b17a] cursor-pointer">About</li>
-          <li className="hover:text-[#f6b17a] cursor-pointer">Portfolio</li>
-          <li className="hover:text-[#f6b17a] cursor-pointer">FAQ</li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">About</li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">Portfolio</li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">FAQ</li>
         </ul>
         <div className="text-[#828282] hidden lg:flex gap-[15px]">
-          <button className="hover:bg-[#F6B17A] hover:text-[#fff] w-[100px] border-[1px] border-[#F6B17A] p-2 rounded-[30px] text-[15px]">
+          <button className="hover:bg-[#FFBD1A] hover:text-[#fff] w-[100px] border-[1px] border-[#FFBD1A] p-2 rounded-[30px] text-[15px]">
             Sign In
           </button>
           <button className="hover:bg-[#fff] hover:text-[#000] w-[100px] rounded-[30px] text-[15px] bg-[#171717]">

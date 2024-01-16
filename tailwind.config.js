@@ -4,10 +4,11 @@ export default {
   theme: {
     extend: {
       textColor: {
-        primaryColor: "#F6B17A",
+        primaryColor: "#FFBD1A",
+        secondaryColor: "#828282",
       },
       backgroundColor: {
-        primaryColor: "#F6B17A",
+        primaryColor: "#FFBD1A",
       },
     },
   },

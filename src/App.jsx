@@ -4,7 +4,7 @@ import Layout from "./components/Layout/Layout";
 function App() {
   return (
     <>
-      <div className="bg-[#171717]">
+      <div className="bg-[#171717] ">
         <Layout />
       </div>
     </>
