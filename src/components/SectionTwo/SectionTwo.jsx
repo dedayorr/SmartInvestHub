@@ -8,7 +8,7 @@ import { FaMoneyBillTransfer } from "react-icons/fa6";
 
 export default function SectionTwo() {
   return (
-    <div className="mt-[15%] flex flex-col gap-[60px] lg:flex-row lg:mt-[10%]">
+    <div className="mx-[7%] mt-[15%] flex flex-col gap-[60px] lg:flex-row lg:mt-[10%]">
       <div>
         <div className="mb-[20px]">
           {" "}
@@ -27,11 +27,13 @@ export default function SectionTwo() {
       </div>
 
       <div className="flex flex-col gap-[25px] lg:w-[50%]">
-        <div className="text-secondaryColor flex gap-[10px]">
+        <div className=" flex gap-[10px]">
           <IoPricetagsOutline className=" w-[200px] h-[50px] text-primaryColor" />
           <div>
-            <h3 className="text-[22px] font-extrabold">Low-cost investing</h3>
-            <p>
+            <h3 className="text-[22px] text-white font-extrabold">
+              Low-cost investing
+            </h3>
+            <p className="text-secondaryColor">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero hic
               velit perspiciatis provident aliquid sed quae magni in mollitia
               possimus esse illo voluptates, corporis fuga alias quod
@@ -43,10 +45,10 @@ export default function SectionTwo() {
         <div className="text-secondaryColor flex gap-[10px] ">
           <FaMoneyBillTransfer className="w-[200px] h-[50px] text-primaryColor" />
           <div>
-            <h3 className="text-[22px] font-extrabold">
+            <h3 className="text-[22px] text-white font-extrabold">
               Potential tax reduction
             </h3>
-            <p>
+            <p className="text-secondaryColor">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               repellat cupiditate quisquam aspernatur deserunt veniam tenetur
               porro sunt, nostrum quo numquam voluptatum quos voluptas nulla
@@ -57,10 +59,10 @@ export default function SectionTwo() {
         <div className="text-secondaryColor flex gap-[10px] ">
           <IoHelpBuoySharp className="w-[200px] h-[50px] text-primaryColor" />
           <div>
-            <h3 className="text-[22px] font-extrabold">
-            Ongoing Support
+            <h3 className="text-[22px] text-white font-extrabold">
+              Ongoing Support
             </h3>
-            <p>
+            <p className="text-secondaryColor">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui
               repellat cupiditate quisquam aspernatur deserunt veniam tenetur
               porro sunt, nostrum quo numquam voluptatum quos voluptas nulla

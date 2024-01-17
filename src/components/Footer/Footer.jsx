@@ -2,5 +2,9 @@
 import React from "react";
 
 export default function Footer() {
-  return <div className="bg-blue-500">Footer</div>;
+  return <div className="bg-primaryColor">
+    <div>
+      
+    </div>
+  </div>;
 }
