@@ -42,15 +42,21 @@ export const NavBar = () => {
             scrolled ? "text-black" : "text-primaryColor"
           }  text-[15px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]`}
         >
-          SmartInvestHub
+          <a href="/">SmartInvestHub</a>
         </p>
         <ul className="text-[#828282] hidden lg:flex gap-[30px]">
           <li className="hover:text-[#FFBD1A] cursor-pointer">
             Products & Services
           </li>
-          <li className="hover:text-[#FFBD1A] cursor-pointer">About</li>
-          <li className="hover:text-[#FFBD1A] cursor-pointer">Portfolio</li>
-          <li className="hover:text-[#FFBD1A] cursor-pointer">FAQ</li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">
+            <a href="#about">About</a>
+          </li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">
+            <a href="#portfolio">Portfolio</a>
+          </li>
+          <li className="hover:text-[#FFBD1A] cursor-pointer">
+            <a href="">FAQ</a>
+          </li>
         </ul>
         <div className="text-[#828282] hidden lg:flex gap-[15px]">
           <button className="hover:bg-[#FFBD1A] hover:text-[#000] w-[100px] border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px]">
@@ -75,9 +81,15 @@ export const NavBar = () => {
         <div className="top-0 bg-primaryColor fixed z-50 h-full w-[70%] px-[10%] flex flex-col gap-[20px] ">
           <ul className=" text-[#000] flex flex-col gap-[30px] text-[18px] mt-[50%] md:text-[35px]">
             <li className="hover:underline">Products & Services</li>
-            <li className="hover:underline">About</li>
-            <li className="hover:underline">Portfolio</li>
-            <li className="hover:underline">FAQ</li>
+            <li className="hover:underline">
+              <a href="#about">About</a>
+            </li>
+            <li className="hover:underline">
+              <a href="#portfolio">Portfolio</a>
+            </li>
+            <li className="hover:underline">
+              <a href="">FAQ</a>
+            </li>
           </ul>
           <button className="hover:bg-black hover:text-primaryColor border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px] font-semibold md:text-[25px]">
             Sign In
