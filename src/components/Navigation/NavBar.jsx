@@ -33,17 +33,17 @@ export const NavBar = () => {
   return (
     <>
       <div
-        className={`sticky top-0 flex justify-between h-[70px] items-center px-[9%] md:h-[90px] lg:px-[7%] ${
+        className={`z-50 sticky top-0 flex justify-between h-[70px] items-center px-[9%] md:h-[90px] lg:px-[7%] ${
           scrolled ? "bg-[#ffffff]" : "bg-transparent"
         }`}
       >
-        <p
+        <div
           className={`${
             scrolled ? "text-black" : "text-primaryColor"
           }  text-[15px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]`}
         >
           <a href="/">SmartInvestHub</a>
-        </p>
+        </div>
         <ul className="text-[#828282] hidden lg:flex gap-[30px]">
           <li className="hover:text-[#FFBD1A] cursor-pointer">
             Products & Services
@@ -55,7 +55,7 @@ export const NavBar = () => {
             <a href="#portfolio">Portfolio</a>
           </li>
           <li className="hover:text-[#FFBD1A] cursor-pointer">
-            <a href="">FAQ</a>
+            <a href="#faq">FAQ</a>
           </li>
         </ul>
         <div className="text-[#828282] hidden lg:flex gap-[15px]">
@@ -88,7 +88,7 @@ export const NavBar = () => {
               <a href="#portfolio">Portfolio</a>
             </li>
             <li className="hover:underline">
-              <a href="">FAQ</a>
+              <a href="#faq">FAQ</a>
             </li>
           </ul>
           <button className="hover:bg-black hover:text-primaryColor border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px] font-semibold md:text-[25px]">

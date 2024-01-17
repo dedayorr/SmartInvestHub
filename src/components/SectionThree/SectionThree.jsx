@@ -14,6 +14,9 @@ export default function SectionThree() {
           numquam repellat dignissimos, explicabo voluptatem consequuntur
           eveniet officiis ab perspiciatis eaque debitis quas?
         </p>
+        <button className="my-[5%] bg-primaryColor p-[10px] rounded-[30px] text-[15px] hover:bg-white hover:text-primaryColor md:text-[25px] w-[100px] lg:text-[20px] md:w-[150px] text-[#000]">
+          Get Stated
+        </button>
       </div>
       <img
         className="rounded-[15px] lg:w-[50%] lg:h-[550px] lg:rounded-[30px]"

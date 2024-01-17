@@ -13,7 +13,6 @@ export default function Portfolio() {
     { value: 8, stock: 23, foreign: 98, markets: 34, dividend: 88, bond: 43 },
     { value: 9, stock: 11, foreign: 19, markets: 56, dividend: 35, bond: 88 },
     { value: 10, stock: 80, foreign: 66, markets: 99, dividend: 19, bond: 9 },
-    // Add more ranges with corresponding stock, dance, and growth values
   ];
   const [selectedRange, setSelectedRange] = useState(true);
   const [percentageValues, setPercentageValues] = useState({
@@ -48,7 +47,7 @@ export default function Portfolio() {
       />
       <div className=" text-white">
         <p className="text-[40px] font-bold text-center text-primaryColor lg:text-[50px]">
-          Example Portfolio
+          Sample Portfolio
         </p>
 
         <div className="flex gap-[20px] justify-center my-[5%] lg:my-[10%] lg:gap-[35px]">

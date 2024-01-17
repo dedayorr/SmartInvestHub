@@ -5,7 +5,9 @@ import SectionTwo from "../components/SectionTwo/SectionTwo";
 import SectionThree from "../components/SectionThree/SectionThree";
 import About from "../components/About/About";
 import Portfolio from "../components/Portfolio/Portfolio";
-// import {Controls, Player} from "react-lottie-player"
+import Faq from "../components/Faq/Faq";
+import Newsletter from "../components/Newsletter/Newsletter";
+import SignUp from "../components/PopUps/SignUp";
 
 export default function LandingPage() {
   return (
@@ -30,7 +32,7 @@ export default function LandingPage() {
             Get Stated
           </button>
         </div>
-        <div className=" hidden lg:block">
+        <div className=" hidden lg:block ">
           <Player
             src="https://lottie.host/b49ef5ee-8601-4ae6-a5c9-d31fbff9dd5d/hwElgr6ouW.json"
             background="transparent"
@@ -47,6 +49,9 @@ export default function LandingPage() {
       <SectionThree />
       <About />
       <Portfolio />
+      <Faq />
+      <Newsletter />
+      <SignUp/>
     </div>
   );
 }
