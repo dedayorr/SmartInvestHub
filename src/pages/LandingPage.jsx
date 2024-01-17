@@ -3,6 +3,7 @@ import React from "react";
 import { Controls, Player } from "@lottiefiles/react-lottie-player";
 import SectionTwo from "../components/SectionTwo/SectionTwo";
 import SectionThree from "../components/SectionThree/SectionThree";
+import About from "../components/About/About";
 // import {Controls, Player} from "react-lottie-player"
 
 export default function LandingPage() {
@@ -43,6 +44,7 @@ export default function LandingPage() {
       </div>
       <SectionTwo />
       <SectionThree />
+      <About />
     </div>
   );
 }
