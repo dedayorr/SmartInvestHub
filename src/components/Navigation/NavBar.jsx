@@ -50,7 +50,7 @@ export const NavBar = () => {
       <div
         className={`z-50 sticky top-0 flex justify-between h-[70px] items-center px-[9%] md:h-[90px] lg:px-[7%] ${
           scrolled ? "bg-[#ffffff]" : "bg-transparent"
-        }  ${hideNavbar === true ? "hidden" : "flex md:hidden lg:hidden"}`}
+        }  ${hideNavbar === true ? "hidden" : "flex"}`}
       >
         <div
           className={`${

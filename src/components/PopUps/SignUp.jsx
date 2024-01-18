@@ -66,15 +66,11 @@ export default function SignUp() {
   };
 
   return (
-    <>
+    <div className="flex lg:justify-center">
       <div
-        className="my-[20%] bg-white py-[15%] mx-[5%] rounded-[15px] px-[5%] flex flex-col gap-[30px]"
+        className="w-full my-[20%] bg-white py-[15%] mx-[5%] rounded-[15px] px-[5%] flex flex-col gap-[30px] lg:my-[5%] lg:py-[5%] lg:w-[40%]"
         style={{ boxShadow: "rgba(255, 189,26, 0.35)  10px 10px 15px" }}
       >
-        {/* <MdCancel
-          // onClick={() => setHideSignUp(false)}
-          className="text-primaryColor text-[40px] absolute top-[-4%] right-[-3%]"
-        /> */}
         <div
           className={`w-[85%] text-center mx-auto text-[30px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]`}
         >
@@ -134,15 +130,15 @@ export default function SignUp() {
         </button>
 
         <p className="text-center">
-          Already have an account ?
+          Already have an account ? 
           <span
             onClick={navigateToSignIn}
             className="text-primaryColor cursor-pointer"
           >
-            Sign In
+             Sign In
           </span>
         </p>
       </div>
-    </>
+    </div>
   );
 }

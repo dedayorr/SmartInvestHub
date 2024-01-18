@@ -1,8 +1,14 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line react/prop-types, no-unused-vars
 export default function SectionThree() {
+  const navigate = useNavigate();
+  const navigateToSignUP = () => {
+    navigate("/sign-up");
+  };
+
   return (
     <div className="text-secondaryColor bg-[#000] mt-[20%] py-[10%] px-[7%] lg:mt-[10%] lg:flex lg:items-center lg:gap-[30px]">
       <div className="">
@@ -16,7 +22,7 @@ export default function SectionThree() {
           eveniet officiis ab perspiciatis eaque debitis quas?
         </p>
         <button
-          // onClick={() => setHidePopUp(true)}
+          onClick={navigateToSignUP}
           className="my-[5%] bg-primaryColor p-[10px] rounded-[30px] text-[15px] hover:bg-white hover:text-primaryColor md:text-[25px] w-[100px] lg:text-[20px] md:w-[150px] text-[#000]"
         >
           Get Stated

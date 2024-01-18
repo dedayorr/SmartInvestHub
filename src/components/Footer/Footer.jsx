@@ -12,7 +12,7 @@ export default function Footer() {
   return (
     <div
       className={` ${
-        hideNavbar === true ? "hidden" : " md:hidden lg:hidden"
+        hideNavbar === true ? "hidden" : " md:block lg:block"
       } bg-primaryColor py-[5%] px-[8%] lg:py-[3%] lg:px-[7%]`}
     >
       <p

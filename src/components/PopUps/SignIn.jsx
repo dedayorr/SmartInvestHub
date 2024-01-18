@@ -61,72 +61,71 @@ export default function SignIn() {
   };
 
   return (
-    <div
-      className="my-[20%] bg-white py-[15%] mx-[5%] rounded-[15px] px-[5%] flex flex-col gap-[30px]"
-      style={{ boxShadow: "rgba(255, 189,26, 0.35)  10px 10px 15px" }}
-    >
-      {/* <MdCancel
-    // onClick={() => setHideSignUp(false)}
-    className="text-primaryColor text-[40px] absolute top-[-4%] right-[-3%]"
-  /> */}
+    <div className="flex lg:justify-center">
+      {" "}
       <div
-        className={`w-[85%] text-center mx-auto text-[30px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]`}
+        className="w-full my-[20%] bg-white py-[15%] mx-[5%] rounded-[15px] px-[5%] flex flex-col gap-[30px] lg:my-[10%] lg:py-[5%] lg:w-[40%]"
+        style={{ boxShadow: "rgba(255, 189,26, 0.35)  10px 10px 15px" }}
       >
-        <a href="/">SmartInvestHub</a>
-      </div>
+        <div
+          className={`w-[85%] text-center mx-auto text-[30px] border-[1px] border-[#FFBD1A] p-1 font-extrabold md:text-[35px] lg:text-[30px]`}
+        >
+          <a href="/">SmartInvestHub</a>
+        </div>
 
-      <input
-        className="outline-none border-[1px] border-[#000] w-full rounded-[10px] p-2"
-        placeholder=" Email Address"
-        type="email"
-        name="email"
-        value={data.email}
-        onChange={handleChange}
-        required
-      />
-
-      <div className="border-[1px] p-2 flex items-center border-[#000] w-full rounded-[10px]">
-        {" "}
         <input
-          className="outline-none bg-transparent w-full"
-          placeholder="Password"
-          type={showPassword ? "text" : "password"}
-          name="password"
-          value={data.password}
+          className="outline-none border-[1px] border-[#000] w-full rounded-[10px] p-2"
+          placeholder=" Email Address"
+          type="email"
+          name="email"
+          value={data.email}
           onChange={handleChange}
           required
         />
-        <div
-          className="float-right"
-          onClick={() => setShowPassword(!showPassword)}
-        >
-          {!showPassword ? (
-            <div className="text-[#00000046]">
-              <IoEyeOff className="text-[18px]" />
-            </div>
-          ) : (
-            <div className="text-primaryColor text-[18px]">
-              <IoEye />
-            </div>
-          )}
-        </div>
-      </div>
-      <button
-        className="bg-primaryColor p-[10px] rounded-[10px] text-[15px] hover:bg-[#000] hover:text-primaryColor md:text-[25px] w-[100px] mx-auto lg:text-[20px] md:w-[150px]"
-        onClick={handleSubmit}
-      >
-        Sign In
-      </button>
 
-      <p className="text-center">
-        Don&apos;t have an account ?{" "}
-        <span
-          onClick={navigateToSignUP}
-          className="text-primaryColor cursor-pointer"
+        <div className="border-[1px] p-2 flex items-center border-[#000] w-full rounded-[10px]">
+          {" "}
+          <input
+            className="outline-none bg-transparent w-full"
+            placeholder="Password"
+            type={showPassword ? "text" : "password"}
+            name="password"
+            value={data.password}
+            onChange={handleChange}
+            required
+          />
+          <div
+            className="float-right"
+            onClick={() => setShowPassword(!showPassword)}
+          >
+            {!showPassword ? (
+              <div className="text-[#00000046]">
+                <IoEyeOff className="text-[18px]" />
+              </div>
+            ) : (
+              <div className="text-primaryColor text-[18px]">
+                <IoEye />
+              </div>
+            )}
+          </div>
+        </div>
+        <button
+          className="bg-primaryColor p-[10px] rounded-[10px] text-[15px] hover:bg-[#000] hover:text-primaryColor md:text-[25px] w-[100px] mx-auto lg:text-[20px] md:w-[150px]"
+          onClick={handleSubmit}
         >
-          Sign Up
-        </span>
-      </p>
+          Sign In
+        </button>
+
+        <p className="text-center">
+          Don&apos;t have an account ?{" "}
+          <span
+            onClick={navigateToSignUP}
+            className="text-primaryColor cursor-pointer"
+          >
+            Sign Up
+          </span>
+        </p>
+      </div>
     </div>
   );
 }
