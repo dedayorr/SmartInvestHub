@@ -8,8 +8,18 @@ import Portfolio from "../components/Portfolio/Portfolio";
 import Faq from "../components/Faq/Faq";
 import Newsletter from "../components/Newsletter/Newsletter";
 import SignUp from "../components/PopUps/SignUp";
+import { useState } from "react";
+import SignIn from "../components/PopUps/SignIn";
+import { ContextProvider } from "../components/Context";
+import { Link } from "react-router-dom";
 
 export default function LandingPage() {
+  const { hideSignUp, setHideSignUp } = useState(ContextProvider);
+  const signUpHandler = () => {
+    setHideSignUp(true);
+    alert("here");
+    console.log("vooom");
+  };
   return (
     <div className="">
       <div className="bg-[#000] h-[480px] mx-[5%] px-[4%] mt-[-20%] pt-[30%] rounded-bl-[35px] rounded-br-[35px] md:h-[650px] lg:pt-[20%] lg:flex lg:h-[750px] lg:rounded-bl-[75px] lg:rounded-br-[75px] lg:justify-between lg:px-[2%] lg:items-center lg:gap-[55px]">
@@ -28,9 +38,13 @@ export default function LandingPage() {
             </p>
           </div>
           <br />
-          <button className="bg-primaryColor p-[10px] rounded-[30px] text-[15px] hover:bg-white hover:text-primaryColor md:text-[25px] w-[100px] lg:text-[20px] md:w-[150px]">
+          <Link
+            to="sign-up"
+            onClick={signUpHandler}
+            className="bg-primaryColor p-[10px] rounded-[30px] text-[15px] hover:bg-white hover:text-primaryColor md:text-[25px] w-[100px] lg:text-[20px] md:w-[150px]"
+          >
             Get Stated
-          </button>
+          </Link>
         </div>
         <div className=" hidden lg:block ">
           <Player
@@ -51,7 +65,6 @@ export default function LandingPage() {
       <Portfolio />
       <Faq />
       <Newsletter />
-      <SignUp/>
     </div>
   );
 }

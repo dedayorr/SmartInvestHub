@@ -1,15 +1,21 @@
 // eslint-disable-next-line no-unused-vars
 import React from "react";
+import { useContext } from "react";
 import { useState, useEffect } from "react";
 import { CiMenuFries } from "react-icons/ci";
 import { LiaTimesSolid } from "react-icons/lia";
+// import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { ContextProvider } from "../Context";
 
 export const NavBar = () => {
+  const { hideNavbar } = useContext(ContextProvider);
   const [dropDown, setdropDown] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const toggleMenu = () => {
     setdropDown(!dropDown);
   };
+  const navigate = useNavigate();
 
   function handleScroll() {
     if (
@@ -30,12 +36,21 @@ export const NavBar = () => {
     };
   }, []);
 
+  const navigateToSignUP = () => {
+    navigate("/sign-up");
+    setdropDown(false);
+  };
+  const navigateToSignIn = () => {
+    navigate("/sign-in");
+    setdropDown(false);
+  };
+
   return (
     <>
       <div
         className={`z-50 sticky top-0 flex justify-between h-[70px] items-center px-[9%] md:h-[90px] lg:px-[7%] ${
           scrolled ? "bg-[#ffffff]" : "bg-transparent"
-        }`}
+        }  ${hideNavbar === true ? "hidden" : "flex md:hidden lg:hidden"}`}
       >
         <div
           className={`${
@@ -59,10 +74,16 @@ export const NavBar = () => {
           </li>
         </ul>
         <div className="text-[#828282] hidden lg:flex gap-[15px]">
-          <button className="hover:bg-[#FFBD1A] hover:text-[#000] w-[100px] border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px]">
+          <button
+            onClick={navigateToSignIn}
+            className="hover:bg-[#FFBD1A] hover:text-[#000] w-[100px] border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px]"
+          >
             Sign In
           </button>
-          <button className="hover:bg-[#fff] hover:text-primaryColor w-[100px] rounded-[30px] text-[15px] bg-[#171717]">
+          <button
+            onClick={navigateToSignUP}
+            className="flex items-center justify-center hover:bg-[#fff] hover:text-primaryColor w-[100px] rounded-[30px] text-[15px] bg-[#171717]"
+          >
             Get Started
           </button>
         </div>
@@ -91,10 +112,16 @@ export const NavBar = () => {
               <a href="#faq">FAQ</a>
             </li>
           </ul>
-          <button className="hover:bg-black hover:text-primaryColor border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px] font-semibold md:text-[25px]">
+          <button
+            onClick={navigateToSignIn}
+            className="hover:bg-black hover:text-primaryColor border-[1px] border-[#828282] p-2 rounded-[30px] text-[15px] font-semibold md:text-[25px]"
+          >
             Sign In
           </button>
-          <button className="hover:bg-[#0005] hover:text-[#000] hover:border hover:border-[#828282]  p-2 rounded-[30px] text-[15px] bg-[#171717] text-primaryColor font-semibold md:text-[25px]">
+          <button
+            onClick={navigateToSignUP}
+            className="hover:bg-[#0005] hover:text-[#000] hover:border hover:border-[#828282]  p-2 rounded-[30px] text-[15px] bg-[#171717] text-primaryColor font-semibold md:text-[25px]"
+          >
             Get Started
           </button>
         </div>

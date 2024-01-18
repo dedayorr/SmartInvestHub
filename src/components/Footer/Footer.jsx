@@ -4,10 +4,17 @@ import { FaFacebook } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 import { FaInstagramSquare } from "react-icons/fa";
 import { IoMail } from "react-icons/io5";
+import { useContext } from "react";
+import { ContextProvider } from "../Context";
 
 export default function Footer() {
+  const { hideNavbar } = useContext(ContextProvider);
   return (
-    <div className="bg-primaryColor py-[5%] px-[8%] lg:py-[3%] lg:px-[7%]">
+    <div
+      className={` ${
+        hideNavbar === true ? "hidden" : " md:hidden lg:hidden"
+      } bg-primaryColor py-[5%] px-[8%] lg:py-[3%] lg:px-[7%]`}
+    >
       <p
         className={`w-[45%] text-center text-[15px] border-[1px] border-[#000] p-1 font-extrabold md:text-[35px] lg:text-[30px] lg:w-[23%]`}
       >
