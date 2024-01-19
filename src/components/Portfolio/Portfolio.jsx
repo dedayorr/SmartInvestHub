@@ -4,16 +4,149 @@ import "../../../src/App.css";
 
 export default function Portfolio() {
   const ranges = [
-    { value: 1, stock: 30, foreign: 60, markets: 35, dividend: 67, bond: 22 },
-    { value: 2, stock: 20, foreign: 44, markets: 20, dividend: 30, bond: 98 },
-    { value: 3, stock: 42, foreign: 75, markets: 22, dividend: 27, bond: 87 },
-    { value: 4, stock: 38, foreign: 40, markets: 34, dividend: 17, bond: 92 },
-    { value: 5, stock: 10, foreign: 70, markets: 5, dividend: 40, bond: 95 },
-    { value: 6, stock: 5, foreign: 12, markets: 77, dividend: 98, bond: 72 },
-    { value: 7, stock: 59, foreign: 67, markets: 27, dividend: 44, bond: 2 },
-    { value: 8, stock: 23, foreign: 98, markets: 34, dividend: 88, bond: 43 },
-    { value: 9, stock: 11, foreign: 19, markets: 56, dividend: 35, bond: 88 },
-    { value: 10, stock: 80, foreign: 66, markets: 99, dividend: 19, bond: 9 },
+    {
+      value: 0,
+      stock: 18,
+      foreign: 4,
+      tech: 2,
+      EmergingStock: 7,
+      nigerianbond: 35,
+      foreignbond: 15,
+      commodities: 7,
+      realestate: 12,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 1,
+      stock: 20,
+      foreign: 5,
+      tech: 3,
+      EmergingStock: 7,
+      nigerianbond: 35,
+      foreignbond: 6,
+      commodities: 12,
+      realestate: 12,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 2,
+      stock: 23,
+      foreign: 5,
+      tech: 4,
+      EmergingStock: 7,
+      nigerianbond: 35,
+      foreignbond: 14,
+      commodities: 12,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 3,
+      stock: 26,
+      foreign: 6,
+      tech: 4,
+      EmergingStock: 7,
+      nigerianbond: 35,
+      foreignbond: 10,
+      commodities: 12,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 4,
+      stock: 29,
+      foreign: 7,
+      tech: 5,
+      EmergingStock: 6,
+      nigerianbond: 35,
+      foreignbond: 6,
+      commodities: 12,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 5,
+      stock: 31,
+      foreign: 8,
+      tech: 6,
+      EmergingStock: 5,
+      nigerianbond: 35,
+      foreignbond: 3,
+      commodities: 12,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 6,
+      stock: 35,
+      foreign: 8,
+      tech: 7,
+      EmergingStock: 3,
+      nigerianbond: 35,
+      foreignbond: 12,
+      commodities: 0,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 7,
+      stock: 45,
+      foreign: 13,
+      tech: 12,
+      EmergingStock: 7,
+      nigerianbond: 23,
+      foreignbond: 0,
+      commodities: 0,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 8,
+      stock: 45,
+      foreign: 15,
+      tech: 15,
+      EmergingStock: 89,
+      nigerianbond: 16,
+      foreignbond: 0,
+      commodities: 0,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 9,
+      stock: 45,
+      foreign: 18,
+      tech: 17,
+      EmergingStock: 11,
+      nigerianbond: 9,
+      foreignbond: 0,
+      commodities: 0,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
+    {
+      value: 10,
+      stock: 45,
+      foreign: 20,
+      tech: 19,
+      EmergingStock: 14,
+      nigerianbond: 2,
+      foreignbond: 0,
+      commodities: 0,
+      realestate: 0,
+      tbills: 0,
+      alternative: 0,
+    },
   ];
   const [selectedRange, setSelectedRange] = useState(true);
   const [percentageValues, setPercentageValues] = useState({
@@ -33,9 +166,14 @@ export default function Portfolio() {
     setPercentageValues({
       stock: selectedRangeData.stock + "%",
       foreign: selectedRangeData.foreign + "%",
-      markets: selectedRangeData.markets + "%",
-      dividend: selectedRangeData.dividend + "%",
-      bond: selectedRangeData.bond + "%",
+      tech: selectedRangeData.tech + "%",
+      EmergingStock: selectedRangeData.EmergingStock + "%",
+      nigerianbond: selectedRangeData.nigerianbond + "%",
+      foreignbond: selectedRangeData.foreignbond + "%",
+      commodities: selectedRangeData.commodities + "%",
+      realestate: selectedRangeData.realestate + "%",
+      tbills: selectedRangeData.tbills + "%",
+      alternative: selectedRangeData.alternative + "%",
     });
   };
 
@@ -81,7 +219,7 @@ export default function Portfolio() {
           Sample Portfolio
         </p>
         <div className=" font-extrabold mt-[5%] lg:mt-[8%] lg:text-[20px]">
-          Select Risk score :
+          Risk score/Tolerance :
         </div>
         <div className="portfolio flex gap-[20px] justify-center my-[5%] font-bold lg:my-[6%] lg:px-2 lg:gap-[35px] ">
           {ranges.map((rangeData, index) => (
@@ -101,7 +239,7 @@ export default function Portfolio() {
               <div className="flex gap-[30px] ">
                 {" "}
                 <p className="font-extrabold lg:font-bold lg:text-[25px]">
-                  US Stocks:
+                  Nigerian Stocks:
                 </p>
                 <div
                   className="bar bg-yellow-500 text-black font-bold"
@@ -124,42 +262,107 @@ export default function Portfolio() {
                 </div>
               </div>
 
-              {/* =======for markets====== */}
+              {/* ====for tech stocks=== */}
               <div className="flex gap-[30px]">
                 <p className="font-extrabold lg:font-bold lg:text-[25px]">
-                  Markets:{" "}
+                  Tech Stocks:
+                </p>{" "}
+                <div
+                  className="bar bg-yellow-500 text-black font-bold"
+                  style={{ width: `${percentageValues.tech}%` }}
+                >
+                  {percentageValues.tech}
+                </div>
+              </div>
+
+              {/* =======for emerging stock====== */}
+              <div className="flex gap-[30px]">
+                <p className="font-extrabold lg:font-bold lg:text-[25px]">
+                  Emerging Stocks:{" "}
                 </p>
                 <div
                   className="bar bg-yellow-500 text-black font-bold"
-                  style={{ width: `${percentageValues.markets}%` }}
+                  style={{ width: `${percentageValues.EmergingStock}%` }}
                 >
-                  {percentageValues.markets}
+                  {percentageValues.EmergingStock}
                 </div>
               </div>
 
-              {/* ========for dividend========= */}
+              {/* ========for nigerian bond========= */}
               <div className="flex gap-[30px]">
                 <p className="font-extrabold lg:font-bold lg:text-[25px]">
-                  Dividend Stocks:{" "}
+                  Nigerian Bonds:{" "}
                 </p>
                 <div
                   className={`bar bg-yellow-500 text-black font-bold`}
-                  style={{ width: `${percentageValues.dividend}%` }}
+                  style={{ width: `${percentageValues.nigerianbond}%` }}
                 >
-                  {percentageValues.dividend}
+                  {percentageValues.nigerianbond}
                 </div>
               </div>
 
-              {/* =======for municipal========= */}
+              {/* =======for foreign bond========= */}
               <div className="flex gap-[30px] ">
                 <p className="font-extrabold lg:font-bold lg:text-[25px]">
-                  Municipal Bonds:{" "}
+                  Foreign Bonds:{" "}
                 </p>
                 <div
                   className={`bar bg-yellow-500 text-black font-bold`}
-                  style={{ width: `${percentageValues.bond}%` }}
+                  style={{ width: `${percentageValues.foreignbond}%` }}
                 >
-                  {percentageValues.bond}
+                  {percentageValues.foreignbond}
+                </div>
+              </div>
+
+              {/* ======for commodities======== */}
+              <div className="flex gap-[30px] ">
+                <p className="font-extrabold lg:font-bold lg:text-[25px]">
+                  Commodities:{" "}
+                </p>
+                <div
+                  className={`bar bg-yellow-500 text-black font-bold`}
+                  style={{ width: `${percentageValues.commodities}%` }}
+                >
+                  {percentageValues.commodities}
+                </div>
+              </div>
+
+              {/* ========Real Estate========= */}
+              <div className="flex gap-[30px] ">
+                <p className="font-extrabold lg:font-bold lg:text-[25px]">
+                  Real Estate:{" "}
+                </p>
+                <div
+                  className={`bar bg-yellow-500 text-black font-bold`}
+                  style={{ width: `${percentageValues.realestate}%` }}
+                >
+                  {percentageValues.realestate}
+                </div>
+              </div>
+
+              {/* ============T-bills======== */}
+              <div className="flex gap-[30px] ">
+                <p className="font-extrabold lg:font-bold lg:text-[25px]">
+                  T-Bills:{" "}
+                </p>
+                <div
+                  className={`bar bg-yellow-500 text-black font-bold`}
+                  style={{ width: `${percentageValues.tbills}%` }}
+                >
+                  {percentageValues.tbills}
+                </div>
+              </div>
+
+              {/* ==========Alternative======== */}
+              <div className="flex gap-[30px] ">
+                <p className="font-extrabold lg:font-bold lg:text-[25px]">
+                  Alternative:{" "}
+                </p>
+                <div
+                  className={`bar bg-yellow-500 text-black font-bold`}
+                  style={{ width: `${percentageValues.alternative}%` }}
+                >
+                  {percentageValues.alternative}
                 </div>
               </div>
             </div>
