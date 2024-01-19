@@ -13,6 +13,7 @@ import SignIn from "../components/PopUps/SignIn";
 import { ContextProvider } from "../components/Context";
 import { Link } from "react-router-dom";
 import SectionFour from "../components/SectionFour/SectionFour";
+import SectionFive from "../components/SectionFive/SectionFive";
 
 export default function LandingPage() {
   const { hideSignUp, setHideSignUp } = useState(ContextProvider);
@@ -63,6 +64,7 @@ export default function LandingPage() {
       <SectionTwo />
       <SectionThree />
       <SectionFour />
+      <SectionFive />
       <About />
       <Portfolio />
       <Faq />
