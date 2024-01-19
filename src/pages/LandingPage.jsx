@@ -7,19 +7,17 @@ import About from "../components/About/About";
 import Portfolio from "../components/Portfolio/Portfolio";
 import Faq from "../components/Faq/Faq";
 import Newsletter from "../components/Newsletter/Newsletter";
-import { useState } from "react";
-import { ContextProvider } from "../components/Context";
+// import { useState } from "react";
+// import { ContextProvider } from "../components/Context";
 import { Link } from "react-router-dom";
 import SectionFour from "../components/SectionFour/SectionFour";
 import SectionFive from "../components/SectionFive/SectionFive";
 
 export default function LandingPage() {
-  const { hideSignUp, setHideSignUp } = useState(ContextProvider);
-  const signUpHandler = () => {
-    setHideSignUp(true);
-    alert("here");
-    console.log("vooom");
-  };
+  // const signUpHandler = () => {
+  //   setHideSignUp(true);
+  //   console.log("vooom");
+  // };
   return (
     <div className="">
       <div className="bg-[#000] h-[480px] mx-[5%] px-[4%] mt-[-20%] pt-[30%] rounded-bl-[35px] rounded-br-[35px] md:h-[650px] lg:pt-[20%] lg:flex lg:h-[750px] lg:rounded-bl-[75px] lg:rounded-br-[75px] lg:justify-between lg:px-[2%] lg:items-center lg:gap-[55px]">
@@ -40,7 +38,7 @@ export default function LandingPage() {
           <br />
           <Link
             to="sign-up"
-            onClick={signUpHandler}
+            // onClick={signUpHandler}
             className="bg-primaryColor p-[10px] rounded-[30px] text-[15px] hover:bg-white hover:text-primaryColor md:text-[25px] w-[100px] lg:text-[20px] md:w-[150px]"
           >
             Get Stated
