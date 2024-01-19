@@ -1,5 +1,5 @@
 // eslint-disable-next-line no-unused-vars
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../../../src/App.css";
 
 export default function Portfolio() {
@@ -28,6 +28,8 @@ export default function Portfolio() {
     const selectedRangeData = ranges.find((r) => r.value === range);
 
     setSelectedRange(range);
+
+    // ===percentageValues===
     setPercentageValues({
       stock: selectedRangeData.stock + "%",
       foreign: selectedRangeData.foreign + "%",
@@ -36,16 +38,44 @@ export default function Portfolio() {
       bond: selectedRangeData.bond + "%",
     });
   };
+
+  // =====Api call for Date and Time=====
+  const [datetime, setDate] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch("http://worldtimeapi.org/api/ip");
+        const data = await response.json();
+
+        // Format the date using JavaScript's Date object
+        const apiDate = new Date(data.datetime);
+        const formattedDate = apiDate.toDateString();
+
+        setDate(formattedDate);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError("Error fetching date ");
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <div
       id="portfolio"
-      className="py-[10%] lg:py-[5%] lg:flex lg:items-center "
+      className="py-[10%] lg:py-[5%] lg:flex lg:items-center lg:mx-[8%]"
     >
-      <img
-        className="hidden lg:block w-[50%] h-[600px]"
-        src="/images/woman.png"
-        alt=""
-      />
+      <div className="hidden lg:block w-[50%]">
+        {" "}
+        <div className="text-[20px] text-primaryColor font-bold">
+          {datetime && <p>{datetime}</p>}
+          {error && <p>{error}</p>}
+        </div>
+        <img className=" h-[600px]" src="/images/woman.png" alt="" />
+      </div>
       <div className=" text-white">
         <p className="text-[40px] font-bold text-center text-primaryColor lg:text-[50px]">
           Sample Portfolio
