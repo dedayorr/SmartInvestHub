@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState } from "react";
+import "../../../src/App.css";
 
 export default function Portfolio() {
   const ranges = [
@@ -49,8 +50,10 @@ export default function Portfolio() {
         <p className="text-[40px] font-bold text-center text-primaryColor lg:text-[50px]">
           Sample Portfolio
         </p>
-
-        <div className="flex gap-[20px] justify-center my-[5%] lg:my-[10%] lg:gap-[35px]">
+        <div className=" font-extrabold mt-[5%] lg:mt-[8%] lg:text-[20px]">
+          Select Risk score :
+        </div>
+        <div className="portfolio flex gap-[20px] justify-center my-[5%] font-bold lg:my-[6%] lg:px-2 lg:gap-[35px] ">
           {ranges.map((rangeData, index) => (
             <div
               className="hover:text-primaryColor lg:text-[24px] cursor-pointer"
