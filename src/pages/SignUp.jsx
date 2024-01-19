@@ -6,7 +6,7 @@ import React, { useState, useEffect } from "react";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { useContext } from "react";
-import { ContextProvider } from "../Context";
+import { ContextProvider } from "../components/Context";
 import { useNavigate } from "react-router-dom";
 
 // eslint-disable-next-line no-unused-vars
@@ -47,18 +47,38 @@ export default function SignUp() {
     e.preventDefault();
 
     try {
-      const response = await fetch("YOUR_BACKEND_API_ENDPOINT", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://smart-invest-hub.onrender.com/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
         alert("Signup successful!");
+        setData({
+          fullname: "",
+          email: "",
+          password: "",
+        });
+      } else if (response.status === 402) {
+        alert("User Exist Already");
+        setData({
+          fullname: "",
+          email: "",
+          password: "",
+        });
       } else {
         alert("Signup failed");
+        setData({
+          fullname: "",
+          email: "",
+          password: "",
+        });
       }
     } catch (error) {
       console.error("Error during signup:", error);
@@ -130,12 +150,12 @@ export default function SignUp() {
         </button>
 
         <p className="text-center">
-          Already have an account ? 
+          Already have an account ?
           <span
             onClick={navigateToSignIn}
             className="text-primaryColor cursor-pointer"
           >
-             Sign In
+            Sign In
           </span>
         </p>
       </div>

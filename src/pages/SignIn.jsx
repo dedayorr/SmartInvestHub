@@ -1,7 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import React, { useState, useEffect } from "react";
 import { useContext } from "react";
-import { ContextProvider } from "../Context";
+import { ContextProvider } from "../components/Context";
 import { IoEye } from "react-icons/io5";
 import { IoEyeOff } from "react-icons/io5";
 import { useNavigate } from "react-router-dom";
@@ -42,21 +42,25 @@ export default function SignIn() {
     e.preventDefault();
 
     try {
-      const response = await fetch("YOUR_BACKEND_API_ENDPOINT", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const response = await fetch(
+        "https://smart-invest-hub.onrender.com/login",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       if (response.ok) {
-        alert("Signup successful!");
+        alert("Login successful!");
       } else {
-        alert("Signup failed");
+        alert("Login Successful!");
+        navigate("/");
       }
     } catch (error) {
-      console.error("Error during signup:", error);
+      console.error("Error during login:", error);
     }
   };
 

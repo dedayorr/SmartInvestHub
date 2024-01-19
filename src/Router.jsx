@@ -1,8 +1,8 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import SignIn from "./components/PopUps/SignIn";
-import SignUp from "./components/PopUps/SignUp";
+import SignIn from "./pages/SignIn";
+import SignUp from "./pages/SignUp";
 import LandingPage from "./pages/LandingPage";
 
 export default function Router() {
